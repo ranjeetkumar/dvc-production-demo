@@ -45,9 +45,14 @@ jobs:
         run: dvc push
 
       - name: Commit and push changes
+        env:
+          GH_TOKEN: ${{ secrets.GH_TOKEN }}
         run: |
           git config --local user.email "action@github.com"
           git config --local user.name "GitHub Action"
           git add .
           git commit -m "Update models and metrics" || echo "No changes to commit"
-          git push
+          git remote set-url origin https://x-access-token:${GH_TOKEN}@github.com/ranjeetkumar/dvc-production-demo.git
+          git push origin main
+        
+      
