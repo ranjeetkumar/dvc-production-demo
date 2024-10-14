@@ -1,4 +1,4 @@
 # params.yaml
 train:
-  C: 1.0
-  max_iter: 100
+  C: 0.5
+  max_iter: 200
