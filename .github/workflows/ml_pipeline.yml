@@ -31,8 +31,9 @@ jobs:
           GCP_SERVICE_ACCOUNT_KEY: ${{ secrets.GCP_SERVICE_ACCOUNT_KEY }}
         run: |
           echo $GCP_SERVICE_ACCOUNT_KEY > gcp-key.json
-          dvc remote add -d myremote gs://dvc_demo_test
+          dvc remote add -d -f myremote gs://dvc_demo_test
           dvc remote modify myremote credentialpath gcp-key.json
+
 
       - name: Pull data from DVC remote
         run: dvc pull
