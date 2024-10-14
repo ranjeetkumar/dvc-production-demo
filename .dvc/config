@@ -2,4 +2,4 @@
     remote = myremote
 ['remote "myremote"']
     url = gs://dvc_demo_test
-    credentialpath = /Users/rankum/.config/gcloud/application_default_credentials.json
+    credentialpath = ../gcp-key.json
