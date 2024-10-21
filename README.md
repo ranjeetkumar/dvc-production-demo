@@ -82,8 +82,5 @@ To configure your DVC remote storage with Google Cloud, authenticate and set up 
 
 This sets up the DVC remote to use your Google Cloud Storage bucket for storing datasets and model files.
 
-## License
-
-This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
 
 
